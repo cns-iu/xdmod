@@ -117,6 +117,7 @@ Ext.extend(CCR.xdmod.ui.ChartConfigMenu, Ext.menu.Menu, {
         if (checked) {
             this.vBarsDisplayType.setDisabled(false);
             this.hBarsDisplayType.setDisabled(true);
+	    this.temporalBarsDisplayType.setDisabled(false);
             this.lineDisplayType.setDisabled(false);
             this.areaDisplayType.setDisabled(false);
             this.pieDisplayType.setDisabled(true);
@@ -134,6 +135,7 @@ Ext.extend(CCR.xdmod.ui.ChartConfigMenu, Ext.menu.Menu, {
             this.trendLineItem.setDisabled(true);
             this.vBarsDisplayType.setDisabled(false);
             this.hBarsDisplayType.setDisabled(false);
+	    this.temporalBarsDisplayType.setDisabled(false);
             this.lineDisplayType.setDisabled(false);
             this.areaDisplayType.setDisabled(true);
             this.pieDisplayType.setDisabled(false);
@@ -389,6 +391,16 @@ Ext.extend(CCR.xdmod.ui.ChartConfigMenu, Ext.menu.Menu, {
             handler: this.onDisplayItemChange
         });
 
+        this.temporalBarsDisplayType = new CCR.xdmod.ui.CustomCheckItem({
+            id: 'temporal_bar_display_type_' + this.id,
+            scope: this,
+            text: 'Bar - Temporal',
+            param: 'temporal_bar',
+            checked: this.displayParam == 'temporal_bar',
+            group: 'display_type',
+            handler: this.onDisplayItemChange
+        });
+
         this.lineDisplayType = new CCR.xdmod.ui.CustomCheckItem({
             id: 'line_display_type_' + this.id,
             scope: this,
@@ -508,6 +520,7 @@ Ext.extend(CCR.xdmod.ui.ChartConfigMenu, Ext.menu.Menu, {
             '-',
             this.vBarsDisplayType,
             this.hBarsDisplayType,
+	    this.temporalBarsDisplayType,
             this.lineDisplayType,
             this.areaDisplayType,
             this.pieDisplayType,

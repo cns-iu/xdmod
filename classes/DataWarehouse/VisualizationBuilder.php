@@ -22,6 +22,7 @@ class VisualizationBuilder
     public static $display_types = array(
         'bar',
         'h_bar',
+        'temporal_bar',
         'line',
         'pie',
         'area'

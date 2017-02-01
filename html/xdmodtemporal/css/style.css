@@ -1,0 +1,622 @@
+/*Page layout*/
+html,body {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+	background: #FFF;
+	font-size:100.01%;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.container {
+	height: 100%;
+	width: 100%;
+	padding-top:10px;
+}
+.legdiv{
+	padding-top:10px;
+	overflow: auto;
+}
+
+.readmaptxt, .footinicatorss{
+    font-size:15px
+}
+
+/*image {
+	max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}*/
+
+img {
+	width: 75px;
+	height: 100%;
+}
+
+.titlediv {
+	height: 2.5%;
+}
+
+.viewsummary {
+	/*border-style: solid;
+    border: 2px solid: lightgrey;*/
+    padding-left: 15px;
+    padding-top: 1px;
+}
+
+
+.titlep{
+	position: relative;
+    left: 30px;
+    display: inline;
+    font-size:25px
+}
+
+.inline-p {
+     display: inline;
+}
+
+line {
+    fill: none;
+    stroke: #666;
+    shape-rendering: crispEdges;
+    opacity: 0.3;
+}
+
+.brush{
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	pointer-events: all;
+	cursor: crosshair;
+}
+.bkg{
+	visibility: hidden;
+	cursor: crosshair;
+}
+.extent{
+	cursor: move;
+}
+.resize{
+	cursor: ew-resize;
+	display: block;
+}
+.brushr{
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	pointer-events: all
+}
+.bkgr{
+	visibility: hidden;
+	cursor: crosshair;
+}
+.extentr{
+	cursor: move;
+}
+.resizer{
+	cursor: ns-resize;
+	display: block;
+}
+#visdiv {
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 2px; 
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+
+path {
+	fill: none;
+	stroke: #000;
+	shape-rendering: crispEdges;
+}
+.axis 
+.minor {
+  stroke: #777;
+  stroke-dasharray: 2,2;
+  stroke-width: 0.4px;
+}
+
+.notseen {
+	opacity: 0 !important;
+}
+
+#homebtn {
+	background: red;
+	border: 1px solid #8f651f;
+	border-radius: 3px;
+	color: #fff;
+	position: absolute;
+	top:100px;
+	left:150px;
+}
+
+#awaybtn {
+	background: blue;
+	border: 1px solid #8f651f;
+	border-radius: 3px;
+	color: #fff;
+	position: absolute;
+	left:50px;
+	top:100px;
+}
+
+#bothbtn {
+	background: blue;
+	border: 1px solid #8f651f;
+	border-radius: 3px;
+	color: red;
+	position: absolute;
+	left:250px;
+	top:100px;
+}
+
+#ctry {
+	width:1000;
+	height:500;
+}
+circle {
+        /*fill: orange;*/
+        stroke: black;
+        stroke-width: 0.7;
+        opacity: 0.7;
+      }
+h2 {
+        text-align: center;
+        color: black;
+      }
+
+
+html {
+	font-family: roboto;
+	font-weight: 400 !important;
+	color: #555 !important;
+}
+
+h3 {
+	font-size: 20px;
+	font-family: open sans !important;
+	font-weight: 600;
+	color: #555 !important;
+	text-align: center !important;
+}
+
+button {
+	border-radius: 5px;
+	font-family: roboto;
+	font-weight: 400 !important;
+}
+
+dl, dd, dt{
+    margin:0;
+}
+
+#accordion {
+	position:absolute;
+	width: 250px;
+	float:left;
+	left:0px;
+	top:0px;
+}
+
+/* Header with Logos */
+.header {
+}
+
+/* Selection box */
+#about {
+	/* This takes away the #about div */
+	/*display: none;*/
+	display:block;
+}
+#selection-box {
+	top: 20px;
+	right: 5%;
+	width: 200px;
+	height: 600px;
+	padding: 10px 20px;
+	background: none;
+	position:absolute;
+}
+#selection-about {
+/*	background: #EFEFEF;
+	color: #000;
+	position: absolute;
+	z-index: 23498576345;
+	bottom: 0;
+	right: 20%;
+	width: 250px;
+	height: 250px;
+*/	text-align: left;
+	overflow-y: none;
+	overflow-x: hidden;
+	max-height: 400px;
+	font-size: 12px;
+	width:100%;
+}
+#selection-display {
+	width:90%;
+	vertical-align:center;
+	margin:auto;
+}
+.table_specification{
+    display: table;
+    width:80%;
+    overflow:hidden;
+}
+.table_specification dl{    
+    display:table-row;  
+}
+.table_specification dt, .table_specification dd{
+    display: table-cell;
+    width:30%;
+}
+.table_specification dd{
+	text-align:right;
+}
+
+/* Debug Panel */
+.button-go {
+	background: #1d8f8f;
+	border: 1px solid #0e4444;
+	border-radius: 3px;
+	float: right;
+	margin-right: 0;
+	color: #fff;
+}
+
+.button-go p {
+	font-weight: 400 !important;
+}
+
+.debug-button {
+	background: #cd902a;
+	border: 1px solid #8f651f;
+	border-radius: 3px;
+	color: #fff;
+	position: absolute;
+	right: 0;
+}
+
+.debug-select {
+	height: 35px;
+	width: 210px;
+	float:right;
+}
+
+.debug-form {
+	display: inline-block;
+	position: relative;
+}
+
+.debug-border {
+	padding: 2px;
+	display: inline-block;
+	background: #F5F5F5;
+	margin: 2px;
+	width: 100%;
+	border-radius: 5px;
+}
+
+#input-select,#input-number {
+	padding: 7px;
+	margin: 15px 5px 5px;
+	width: 70px;
+}
+
+/* Tolerance Slider */
+.noUi-connect {
+	background-image: linear-gradient(to top right,#1D8E8E,#C2E0E0) !important;
+}
+
+.panel {
+	top:0px;
+	/* This takes away the debug panel */
+	/*display: none;*/
+}
+
+/*Visualizations*/
+#vis-header {
+	width: auto;
+	color: #555;
+	background: none;
+	left: 20px;
+	right: 20px;
+}
+
+#vis-header h3 {
+	font-size: .9em;
+	color: #000 !important;
+	text-align: left !important;
+	line-height: 1.5em !important;
+}
+
+
+.selected {
+	opacity: 1 !important;
+	font-weight: bold;
+}
+.deselected {
+	opacity: .95;
+	font-weight: normal;
+}
+
+/*Force network*/
+#vis-div {
+	position: absolute;
+	left:25%;
+	width: 75%;
+	height: 85%;
+	overflow: hidden;
+}
+
+circle.highlighted {
+	stroke-width: 2;
+}
+circle.selected {
+	stroke-width:3;
+}
+
+.b {
+	cursor: pointer;
+	stroke: #444;
+	stroke-width: 1;
+	fill: lightgrey;
+}
+rect.highlighted {
+	stroke-width: 2;
+}
+rect.selected {
+	stroke-width:1;
+}
+
+/*Labels (text)*/
+.l {
+	letter-spacing: 1px !important;
+	color: #555;
+	cursor: pointer;
+	text-shadow: 0 2px 3px rgba(255,255,255,.6);
+}
+
+/*Smaller labels (text)*/
+.l2 {
+	stroke-width: .035em;
+	cursor: pointer;
+}
+
+/*Force network legends*/
+#legend-title h1 {
+	font-size: 1.25em;
+	font-weight: 400;
+	text-align: center;
+	background: #fff;
+	text-transform: uppercase;
+	margin-top: 5px !important;
+	margin-bottom: 7px !important;
+}
+
+#legend-container {
+	top: 85%;
+	background: #fff;
+	position: relative;
+	border-top: 1px solid #e2e2e2;
+	height:200px;
+	width:80%;
+	left:20%;
+}
+
+.how-to {
+	margin: 0;
+	text-align: left !important;
+	width: 300px;
+	float: left;
+}
+
+.how-to h3 {
+	font-weight: 400 !important;
+	line-height: 1.25em;
+	font-size: 1.25em;
+	bottom: 0;
+}
+
+.how-to p {
+	top: 0;
+	line-height: 1.2em;
+	font-size: 1em;
+	text-align: left;
+}
+
+#main-vis-node-size-legend {
+	width: 19%;
+	height: 100px;
+	float: left;
+	padding-left: 50px;
+}
+
+#main-vis-node-color-legend {
+	width: 24%;
+	height: 100px;
+	left: 25%;
+	float: left;
+}
+
+#main-vis-edge-opacity-legend {
+	width: 24%;
+	height: 100px;
+	left: 50%;
+	float: left;
+}
+
+#main-vis-edge-width-legend {
+	width: 24%;
+	height: 100px;
+	left: 80%;
+	float: left;
+}
+
+.help {
+	left: 0px;
+}
+
+.logos {
+	max-width: 20% !important;
+	right: 20px !important;
+	padding-top: 890px;
+	float: right !important;
+	display: block;
+	position: absolute;
+	background:none;
+}
+
+/*Axes*/
+.axis text {
+	font: 10px sans-serif;
+}
+
+/*Component bar graph*/
+#scrollable {
+	position: absolute;
+	display: block;
+	width: 20%;
+	top: 0;
+	height: 100%;
+	overflow-x: none;
+	overflow-y: none;
+	background: #FFF;
+
+}
+
+#main-vis-bar-graph {
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 93%;
+}
+
+.icon {
+	right: 0px;
+}
+
+/* Tool Tip */
+
+/* Add this attribute to the element that needs a tooltip */
+[data-tooltip] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  float: left;
+  left: 40px;
+}
+
+/* Hide the tooltip content by default */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Position tooltip above the element */
+[data-tooltip]:before {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-bottom: 5px;
+  margin-left: -80px;
+  padding: 7px;
+  width: 160px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #888;
+  background-color:rgba(255,255,255,.9);
+  padding: 10px 0px;
+  color: #555;
+  content: attr(data-tooltip);
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+/* Triangle hack to make tooltip look like a speech bubble */
+[data-tooltip]:after {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -5px;
+  width: 0;
+  border-top: 5px solid #000;
+  border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+}
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  float: right;
+}
+
+.question {
+	padding: 0px;
+	left: 0px;
+	bottom: 0px;
+	float: left;
+	max-width: 55%;
+
+}
+
+.question-1 {
+	position:absolute;
+	top:5px;
+	left: 200px;
+
+.question-2 {
+	max-width: 55%;
+}
+
+
+
+
+.question-container {
+	width: 24%;
+}
+

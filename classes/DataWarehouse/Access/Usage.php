@@ -71,6 +71,7 @@ class Usage extends Common
             || $usageFormat === 'json'
             || $isJsonStoreExport
         ;
+        $isCnsTest = $usageFormat === 'cnstest';
 
         // If present, move the fact value into statistic.
         if (array_key_exists('fact', $this->request)) {
@@ -884,6 +885,7 @@ class Usage extends Common
         $meRequestDataOptions['display_type'] = (
             $usageDisplayType === 'bar'
             || $usageDisplayType === 'h_bar'
+            || $usageDisplayType === 'temporal_bar'
             || $usageDisplayType === 'auto'
         ) ? 'column' : $usageDisplayType;
         $meRequest['swap_xy'] = $usageDisplayType === 'h_bar';

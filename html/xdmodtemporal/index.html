@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title></title>
+	<meta name="viewport" content="initial-scale=1.0,width=device-width" />
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+	<script src="lib/jquery-1.11.2.min.js"></script>
+	<script src="lib/head.js"></script>
+	<script src="src/Init.js"></script>
+</head>
+<body ng-cns-vis-runner>
+	<div id=alldivs>
+		<div class = "titlediv" id="imagelogo">
+		<a href="http://cns.iu.edu">
+  			<img id="theImg"  src="images/CNS_logo.png"/>
+		</a>
+			<p class="titlep" align="left">Grants by Year</p>
+		</div>
+	</div>
+	<div class = "container" id= "container" style = "float: left;" ng-cns-visual ng-vis-type="TemporalBarChart" id="vis" ng-data-field="xdmodtemporaldata" ng-identifier="TemporalBarChart">
+	</div>
+	<div class="legdiv" id="legdiv">
+	</div>
+</body>
+<script>
+	$(window).resize(function(){
+		vph = $(window).height();
+		document.getElementById('container').style.height = vph + "px";
+		visualizations.TemporalBarChart.ResetVis({empty:true});
+	})
+</script>
+</html>
+
+

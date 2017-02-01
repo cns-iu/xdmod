@@ -1,0 +1,91 @@
+/* ----- Axis Styles ------ */
+
+.wvf-axis text {
+	font: 10px sans-serif;
+}
+
+.wvf-axis path {
+	stroke-dasharray:5,5;
+	fill: none;
+	stroke: #666;
+	shape-rendering: crispEdges;
+}
+
+.wvf-axis line {
+
+}
+
+/* ---- Node Styles ---- */
+
+.wvf-node selected {
+}
+
+.wvf-node deselected {
+	stroke-width: .2;
+	stroke: #444 !important;
+	cursor: pointer;
+	fill: lightgrey;
+	}
+
+.wvf-node focused {
+	stroke-width:3;
+}
+
+/* ---- Labels ----- */
+
+
+.wvf-label selected {
+
+}
+
+.wvf-label deselected {
+
+}
+
+.wvf-label focused {
+
+}
+
+/* ---- Edge Styles ---- */
+
+.wvf-edge selected {
+	stroke: #666 !important;
+	cursor: pointer;
+	stroke-width: 1;
+}
+
+.wvf-edge deselected {
+
+} 
+
+.wvf-edge focused {
+
+
+}
+
+/* --- Rectangle Styles ---- */
+
+.wvf-rect selected {
+
+}
+
+.wvf-rect deselected {
+
+}
+
+.wvf-rect focused {
+
+}
+
+/* --- Path Styles  ----- */
+.wvf-path selected {
+
+}
+
+.wvf-path deselected {
+
+}
+
+.wvf-path focused {
+
+}
